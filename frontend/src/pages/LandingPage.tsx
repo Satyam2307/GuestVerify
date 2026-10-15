@@ -28,7 +28,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, latestEven
         {/* Left: Editorial Headline & Copy */}
         <div className="max-w-xl space-y-6 text-left">
           {/* Subtle Track Tag */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/80 border border-black/[0.07] text-[#18170F] text-[12px] font-semibold shadow-[0_2px_12px_rgba(0,0,0,0.04)] backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/80 border border-black/[0.07] text-[#18170F] text-[12px] font-semibold shadow-[0_2px_12px_rgba(0,0,0,0.04)] backdrop-blur-sm font-editorial">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5DA87E] opacity-40" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#5DA87E]" />
@@ -36,17 +36,17 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, latestEven
             <span>Ring Ecosystem + AWS Bedrock Challenge</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl lg:text-[72px] font-extrabold tracking-[-0.035em] text-[#18170F] leading-[1.05]">
+          <h1 className="font-display text-4xl sm:text-6xl lg:text-[72px] font-extrabold tracking-[-0.035em] text-[#18170F] leading-[1.05]">
             Your front door, <br />
-            <span className="text-[#918C84]">with better judgment.</span>
+            <span className="text-[#8C877E] font-medium">with better judgment.</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-[#65625B] leading-relaxed font-normal">
+          <p className="font-editorial text-lg sm:text-xl text-[#58554F] leading-relaxed font-normal">
             Smart doorbells tell you someone is there. <strong className="font-bold text-[#18170F]">GuestVerify</strong> understands who they are, cross-references your active schedules, and applies deterministic security policies so an AI model never blindly unlocks your door.
           </p>
 
           {/* Action CTAs */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 font-display">
             <button
               onClick={() => onNavigate('/console')}
               className="px-7 py-4 rounded-full bg-gradient-to-r from-[#18170F] to-[#2A2825] hover:from-[#18170F] hover:to-[#3A3835] text-white font-bold text-[14px] shadow-[0_6px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_28px_rgba(0,0,0,0.2)] transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer group active:scale-95"
@@ -66,16 +66,16 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, latestEven
           {/* Trust Guarantees */}
           <div className="grid grid-cols-3 gap-5 pt-8 border-t border-black/[0.06] text-xs">
             <div>
-              <span className="text-[#18170F] font-bold block text-[15px] tracking-tight">Deterministic</span>
-              <span className="text-[#65625B] font-medium">Zero-trust policy</span>
+              <span className="font-display text-[#18170F] font-bold block text-[16px] tracking-tight">Deterministic</span>
+              <span className="font-editorial text-[#65625B] font-medium text-[13px]">Zero-trust policy</span>
             </div>
             <div>
-              <span className="text-[#18170F] font-bold block text-[15px] tracking-tight">Claude 3.5</span>
-              <span className="text-[#65625B] font-medium">Structured claims</span>
+              <span className="font-display text-[#18170F] font-bold block text-[16px] tracking-tight">Claude 3.5</span>
+              <span className="font-editorial text-[#65625B] font-medium text-[13px]">Structured claims</span>
             </div>
             <div>
-              <span className="text-[#18170F] font-bold block text-[15px] tracking-tight">Fail-closed</span>
-              <span className="text-[#65625B] font-medium">Safe hardware state</span>
+              <span className="font-display text-[#18170F] font-bold block text-[16px] tracking-tight">Fail-closed</span>
+              <span className="font-editorial text-[#65625B] font-medium text-[13px]">Safe hardware state</span>
             </div>
           </div>
         </div>
