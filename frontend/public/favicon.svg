@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <!-- Rounded Base Plate -->
+  <rect width="64" height="64" rx="16" fill="#18170F"/>
+  <rect x="1" y="1" width="62" height="62" rx="15" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+  
+  <!-- Subtle Gradient Accent Glow -->
+  <defs>
+    <radialGradient id="gvGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#5DA87E" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#18170F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shieldGrad" x1="16" y1="12" x2="48" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5DA87E"/>
+      <stop offset="100%" stop-color="#3D9986"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="64" height="64" rx="16" fill="url(#gvGlow)"/>
+  
+  <!-- Security Shield Path -->
+  <path d="M32 14L46 19.5V30C46 40 39.5 48.2 32 51C24.5 48.2 18 40 18 30V19.5L32 14Z" 
+        fill="url(#shieldGrad)" 
+        stroke="#FFFFFF" 
+        stroke-width="1.5" 
+        stroke-linejoin="round"/>
+        
+  <!-- Verification Keyhole / Checkmark Inside Shield -->
+  <path d="M26 31.5L30.2 35.7L38 27.5" 
+        stroke="#FFFFFF" 
+        stroke-width="3" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+</svg>

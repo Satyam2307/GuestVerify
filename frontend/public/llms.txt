@@ -1,0 +1,27 @@
+# GuestVerify — Smart-Home AI Gatekeeper
+
+> Zero-Trust AI Visitor Verification gatekeeper for Ring Doorbell and smart home platforms, powered by Amazon Bedrock and deterministic policy engines.
+
+## System Overview
+GuestVerify is an intelligent smart-home gatekeeper designed to process visitor door interactions (motion triggers, doorbell chimes, two-way conversational audio) and enforce deterministic safety policies before any physical or simulated lock action is allowed.
+
+## Architecture Principles
+1. **AI Intent Extraction**: Uses Amazon Bedrock (Claude 3.5 Haiku) solely to parse unstructured speech transcripts into structured visitor claims (claimed identity, recipient, purpose, tracking numbers, and risk flags).
+2. **Deterministic Policy Engine**: Pure rule-based policy verification compares visitor claims against active delivery databases and scheduled visitor windows.
+3. **Fail-Closed Security Guarantee**: Any ambiguity, prompt injection attempt, missing schedule, or expired window triggers `DENIED_UNKNOWN` or `CREATE_SECURITY_ALERT`. The door remains strictly locked.
+
+## Routes & Slugs
+- `/`: Interactive Overview, 3D Doorbell Experience, scenario breakdowns, and architecture.
+- `/console`: Single-screen live Ring doorbell simulation console with Bedrock AI intent extraction and policy verification.
+- `/schedules`: Scheduled visitors, expected deliveries, recurring guest windows, and time-bound access management.
+- `/events`: Real-time immutable audit trail and historical security events with decision rationale.
+- `/settings`: Zero-trust security engine controls, fail-closed policy parameters, and telemetry status.
+- `/contact`: Direct security architecture inquiry, enterprise deployment contact, and instant WhatsApp support.
+
+## Developer & API Endpoints
+- `POST /api/v1/ring-webhook`: Ingests Ring doorbell triggers.
+- `GET /api/v1/schedules`: Retrieves active access schedules.
+- `POST /api/v1/schedules`: Adds a new scheduled guest or expected delivery.
+- `POST /api/v1/contact`: Validates and sanitizes inquiries with rate limiting.
+- `GET /api/v1/stream`: Server-Sent Events (SSE) live updates.
+- `GET /health`: System telemetry, Amazon Bedrock availability, and fail-safe status.

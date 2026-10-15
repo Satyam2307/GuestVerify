@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /health
+Disallow: /backend/
+
+# Host and Sitemap
+Host: https://guestverify.ai
+Sitemap: https://guestverify.ai/sitemap.xml

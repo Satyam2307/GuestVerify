@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --navbar-height: 76px;
+
+    /* ── Premium warm palette with richer depth ── */
+    --bg-page: #F5F1EB;
+    --bg-page-gradient: linear-gradient(168deg, #F7F4EF 0%, #EDE8E0 50%, #F0ECE5 100%);
+    --card-bg: #FFFDFB;
+    --card-bg-hover: #FFFFFF;
+    --text-primary: #18170F;
+    --text-secondary: #65625B;
+    --text-tertiary: #918C84;
+    --border-warm: #DDD6CB;
+    --border-light: rgba(0, 0, 0, 0.05);
+
+    /* ── Enhanced shadow system ── */
+    --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.02);
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.07), 0 2px 8px rgba(0, 0, 0, 0.03);
+    --shadow-elevated: 0 16px 48px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
+    --shadow-glow-coral: 0 8px 32px rgba(231, 111, 97, 0.15);
+    --shadow-glow-sage: 0 8px 32px rgba(114, 168, 137, 0.15);
+    --shadow-glow-saffron: 0 8px 32px rgba(233, 168, 59, 0.15);
+
+    /* ── Accent colors — richer and more vibrant ── */
+    --coral: #E5654F;
+    --coral-bright: #F0715C;
+    --coral-soft: #FDE7E2;
+    --coral-border: #F4C0B6;
+
+    --saffron: #E4A02F;
+    --saffron-bright: #F2B243;
+    --saffron-soft: #FFF1D2;
+    --saffron-border: #F0D190;
+    --saffron-text: #7A4E00;
+
+    --sage: #5DA87E;
+    --sage-bright: #6EC494;
+    --sage-soft: #E1F3E7;
+    --sage-border: #A8DFB8;
+    --sage-text: #186941;
+
+    --teal: #3D9986;
+    --teal-soft: #DFF0EC;
+    --teal-border: #95D2C4;
+
+    --red-soft: #FDEAE9;
+    --red-text: #922525;
+    --red-border: #F0B5B5;
+
+    /* ── Premium gradient system ── */
+    --gradient-coral: linear-gradient(135deg, #E5654F 0%, #F2815E 100%);
+    --gradient-sage: linear-gradient(135deg, #5DA87E 0%, #7BC69A 100%);
+    --gradient-saffron: linear-gradient(135deg, #E4A02F 0%, #F2C254 100%);
+    --gradient-dark: linear-gradient(135deg, #1A1918 0%, #2A2825 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+  }
+
+  body {
+    background: var(--bg-page);
+    background-image: var(--bg-page-gradient);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.01em;
+  }
+
+  /* Better headings weight */
+  h1, h2, h3, h4, h5, h6 {
+    font-feature-settings: "cv02", "cv11", "ss01";
+    letter-spacing: -0.025em;
+  }
+}
+
+/* ── Console Single-Screen Lock ── */
+.console-page {
+  height: calc(100dvh - var(--navbar-height));
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.console-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+
+.main-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  gap: 16px;
+  min-height: 0;
+  flex: 1;
+}
+
+.panel-scrollable {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #CBC5BC transparent;
+}
+
+/* ── Scenario Rail ── */
+.scenario-rail {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 4px 2px 8px;
+  scrollbar-width: none;
+}
+
+.scenario-rail::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Product Cards — Enhanced ── */
+.product-card {
+  background: var(--card-bg);
+  border-radius: 22px;
+  border: 1px solid var(--border-warm);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.8) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.product-card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+  border-color: #D0C9BE;
+}
+
+/* ── Drawer Overlay ── */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.25s ease;
+}
+
+.drawer-panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: min(520px, 90vw);
+  z-index: 70;
+  background: var(--card-bg);
+  border-left: 1px solid var(--border-warm);
+  box-shadow: -16px 0 48px rgba(0, 0, 0, 0.14);
+  overflow-y: auto;
+  animation: slideInRight 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+/* ── Processing Pulse — Enhanced ── */
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(229, 101, 79, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(229, 101, 79, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(229, 101, 79, 0); }
+}
+
+.pulse-coral {
+  animation: pulse-ring 1.5s ease-in-out infinite;
+}
+
+@keyframes fadeUpIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up-in {
+  animation: fadeUpIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Shimmer/shine effect for premium feel ── */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    var(--text-primary) 0%,
+    var(--text-secondary) 40%,
+    var(--text-primary) 60%,
+    var(--text-secondary) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ── Glowing badges ── */
+.glow-badge-green {
+  box-shadow: 0 0 0 3px rgba(93, 168, 126, 0.12), 0 2px 8px rgba(93, 168, 126, 0.15);
+}
+.glow-badge-coral {
+  box-shadow: 0 0 0 3px rgba(229, 101, 79, 0.12), 0 2px 8px rgba(229, 101, 79, 0.15);
+}
+.glow-badge-saffron {
+  box-shadow: 0 0 0 3px rgba(228, 160, 47, 0.12), 0 2px 8px rgba(228, 160, 47, 0.15);
+}
+
+/* ── Progress Line ── */
+@keyframes progressSweep {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.progress-sweep {
+  animation: progressSweep 0.5s ease-out both;
+}
+
+/* ── Scrollbars — Subtle ── */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBC5BC;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A9A29B;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Floating dot animation ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.float-subtle {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ── Gradient text utility ── */
+.gradient-text-coral {
+  background: var(--gradient-coral);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-sage {
+  background: var(--gradient-sage);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── 3D Perspective for hero ── */
+.perspective-container {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* ── Mobile override: allow scrolling on console ── */
+@media (max-width: 1023px) {
+  .console-page {
+    height: auto;
+    overflow: visible;
+  }
+
+  .main-workspace {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

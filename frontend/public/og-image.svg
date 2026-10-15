@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" fill="none">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#F5F1EB"/>
+  
+  <!-- Subtle Grid Accent -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E3DDD3" stroke-width="0.8" opacity="0.6"/>
+    </pattern>
+    <linearGradient id="shieldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#18170F"/>
+      <stop offset="100%" stop-color="#2D2B26"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5DA87E"/>
+      <stop offset="100%" stop-color="#3D9986"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Glow effect -->
+  <circle cx="950" cy="300" r="280" fill="#5DA87E" opacity="0.12" filter="blur(60px)"/>
+  <circle cx="200" cy="150" r="200" fill="#E4A02F" opacity="0.08" filter="blur(50px)"/>
+
+  <!-- Logo Pill & Badge -->
+  <g transform="translate(100, 90)">
+    <rect width="210" height="48" rx="24" fill="#FFFFFF" stroke="#E3DDD3" stroke-width="1.5"/>
+    <circle cx="24" cy="24" r="5" fill="#5DA87E"/>
+    <text x="38" y="29" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#18170F" letter-spacing="0.5">RING + AWS BEDROCK</text>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="100" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="800" fill="#18170F" letter-spacing="-1.5">
+    GuestVerify
+  </text>
+  
+  <text x="100" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="700" fill="#65625B" letter-spacing="-0.5">
+    Smart-Home AI Gatekeeper
+  </text>
+
+  <!-- Tagline / Description -->
+  <text x="100" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="400" fill="#65625B">
+    Zero-trust visitor verification for smart doorbells.
+  </text>
+  <text x="100" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="400" fill="#65625B">
+    AI understands intent, deterministic policy enforces safety.
+  </text>
+
+  <!-- Feature Tags -->
+  <g transform="translate(100, 460)">
+    <!-- Pill 1 -->
+    <rect width="220" height="54" rx="27" fill="#FFFFFF" stroke="#E3DDD3" stroke-width="1.5"/>
+    <text x="24" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#18170F">🔒 Zero-Trust Policy</text>
+
+    <!-- Pill 2 -->
+    <rect x="236" width="220" height="54" rx="27" fill="#FFFFFF" stroke="#E3DDD3" stroke-width="1.5"/>
+    <text x="260" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#18170F">⚡ Claude 3.5 Haiku</text>
+
+    <!-- Pill 3 -->
+    <rect x="472" width="220" height="54" rx="27" fill="#FFFFFF" stroke="#E3DDD3" stroke-width="1.5"/>
+    <text x="496" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#18170F">🛡️ Fail-Closed Design</text>
+  </g>
+
+  <!-- Right Visual Card -->
+  <g transform="translate(760, 110)">
+    <rect width="340" height="420" rx="28" fill="#FFFFFF" stroke="#E3DDD3" stroke-width="2" filter="drop-shadow(0 20px 30px rgba(0,0,0,0.06))"/>
+    
+    <!-- Top Card Header -->
+    <rect x="24" y="24" width="60" height="60" rx="18" fill="url(#shieldGrad)"/>
+    <!-- Shield Icon in Header -->
+    <path d="M54 44L63 47.5V54C63 60 59 65 54 67C49 65 45 60 45 54V47.5L54 44Z" fill="#5DA87E"/>
+    <circle cx="54" cy="54" r="3" fill="#FFFFFF"/>
+
+    <text x="96" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" fill="#18170F">Front Doorbell</text>
+    <text x="96" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#5DA87E">Live Gatekeeper Active</text>
+
+    <!-- Simulated Verification Box -->
+    <rect x="24" y="110" width="292" height="130" rx="16" fill="#F8F6F2" stroke="#EAE5DC" stroke-width="1"/>
+    <text x="44" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#918C84" letter-spacing="0.5">VISITOR CLAIM</text>
+    <text x="44" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#18170F">"Package delivery from Amazon"</text>
+    <text x="44" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#65625B">Tracking # matched to active schedule</text>
+    <circle cx="44" cy="220" r="4" fill="#5DA87E"/>
+    <text x="56" y="224" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#5DA87E">POLICY: ALLOW_PACKAGE_DROP</text>
+
+    <!-- Bottom Lock Simulator Status -->
+    <rect x="24" y="260" width="292" height="130" rx="16" fill="#18170F"/>
+    <text x="44" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Simulated Action</text>
+    <text x="44" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#5DA87E">Unlocked Porch Gate</text>
+    <text x="44" y="365" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#918C84">Hardware: Fail-Closed Protection</text>
+  </g>
+</svg>
