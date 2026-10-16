@@ -1,4 +1,8 @@
 fastapi
-uvicorn
-boto3
+uvicorn[standard]
 pydantic
+boto3
+python-dotenv
+httpx
+python-multipart
+starlette
