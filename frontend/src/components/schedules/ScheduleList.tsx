@@ -50,8 +50,8 @@ export const ScheduleList: React.FC<ScheduleListProps> = ({
               onClick={() => setFilter(tab.id as any)}
               className={`px-4 py-[7px] rounded-full text-[12px] font-semibold transition-all duration-200 cursor-pointer whitespace-nowrap ${
                 filter === tab.id
-                  ? 'bg-[#18170F] text-white shadow-[0_2px_8px_rgba(0,0,0,0.12)]'
-                  : 'text-[#65625B] hover:text-[#18170F] hover:bg-black/[0.05]'
+                  ? 'bg-[#722F37] text-white shadow-[0_2px_10px_rgba(114,47,55,0.25)]'
+                  : 'text-[#5C544D] hover:text-[#722F37] hover:bg-black/[0.04]'
               }`}
             >
               {tab.label}
@@ -61,7 +61,7 @@ export const ScheduleList: React.FC<ScheduleListProps> = ({
 
         <button
           onClick={onOpenAddModal}
-          className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#18170F] to-[#2A2825] hover:from-[#18170F] hover:to-[#3A3835] text-white text-[12px] font-bold shadow-[0_4px_12px_rgba(0,0,0,0.12)] hover:shadow-[0_6px_16px_rgba(0,0,0,0.18)] transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer self-start sm:self-auto active:scale-95"
+          className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#722F37] to-[#8D3A44] hover:from-[#5C232A] hover:to-[#7E333C] text-white text-[12px] font-bold shadow-[0_4px_16px_rgba(114,47,55,0.32)] hover:shadow-[0_6px_22px_rgba(114,47,55,0.45)] transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer self-start sm:self-auto active:scale-95"
         >
           <Plus className="w-3.5 h-3.5" />
           <span>Add scheduled visitor</span>

@@ -101,8 +101,8 @@ export const Navigation: React.FC<NavigationProps> = ({
     <nav
       className={`sticky top-0 z-50 w-full transition-all duration-400 ${
         scrolled
-          ? 'bg-[#12110D]/95 backdrop-blur-2xl border-b border-white/[0.08] shadow-[0_4px_30px_rgba(0,0,0,0.35)]'
-          : 'bg-[#181712]/98 backdrop-blur-xl border-b border-white/[0.07]'
+          ? 'bg-[#14100E]/95 backdrop-blur-2xl border-b border-[#B7A89A]/20 shadow-[0_4px_30px_rgba(0,0,0,0.45)]'
+          : 'bg-[#181310]/98 backdrop-blur-xl border-b border-[#B7A89A]/15'
       }`}
     >
       <div className="max-w-[1280px] mx-auto px-5 sm:px-8">
@@ -110,29 +110,29 @@ export const Navigation: React.FC<NavigationProps> = ({
           {/* Brand area */}
           <button
             onClick={() => handleLinkClick('/')}
-            className="flex items-center gap-3 text-left cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20 rounded-xl pr-2 -ml-1"
+            className="flex items-center gap-3 text-left cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E8DCC6]/40 rounded-xl pr-2 -ml-1"
             aria-label="GuestVerify Home"
           >
-            <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#25231C] to-[#3A372E] border border-white/15 flex items-center justify-center text-white shadow-[0_4px_12px_rgba(0,0,0,0.3)] transition-all group-hover:shadow-[0_6px_20px_rgba(93,168,126,0.3)] group-hover:scale-[1.03]">
-              <Shield className="w-5 h-5 text-[#5DA87E]" />
+            <div className="w-10 h-10 rounded-[14px] bg-gradient-to-br from-[#722F37] via-[#5C232A] to-[#3D151B] border border-[#E8DCC6]/30 flex items-center justify-center text-white shadow-[0_4px_16px_rgba(114,47,55,0.4)] transition-all group-hover:shadow-[0_6px_22px_rgba(114,47,55,0.6)] group-hover:scale-[1.03]">
+              <Shield className="w-5 h-5 text-[#E8DCC6]" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-bold text-[15px] sm:text-[17px] tracking-[-0.02em] text-white">
+                <span className="font-bold text-[15px] sm:text-[17px] tracking-[-0.02em] text-[#FAF7F2]">
                   GuestVerify
                 </span>
-                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white/10 text-white/90 border border-white/15">
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[#722F37]/40 text-[#E8DCC6] border border-[#E8DCC6]/25">
                   v2.0
                 </span>
               </div>
-              <span className="text-[11px] text-[#A5A096] block -mt-0.5 font-medium tracking-wide">
+              <span className="text-[11px] text-[#B7A89A] block -mt-0.5 font-medium tracking-wide">
                 Zero-Trust AI Gatekeeper
               </span>
             </div>
           </button>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-1 p-1 rounded-full bg-white/[0.07] border border-white/[0.08] backdrop-blur-md">
+          <div className="hidden lg:flex items-center gap-1 p-1 rounded-full bg-white/[0.05] border border-[#B7A89A]/20 backdrop-blur-md">
             {navLinks.map((link) => {
               const isActive = currentPath === link.path
               return (
@@ -140,10 +140,10 @@ export const Navigation: React.FC<NavigationProps> = ({
                   key={link.path}
                   onClick={() => handleLinkClick(link.path)}
                   aria-current={isActive ? 'page' : undefined}
-                  className={`px-4 py-[7px] text-[12px] font-semibold rounded-full transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20 ${
+                  className={`px-4 py-[7px] text-[12px] font-semibold rounded-full transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E8DCC6]/30 ${
                     isActive
-                      ? 'bg-white text-[#14130D] shadow-[0_2px_10px_rgba(255,255,255,0.25)] font-bold'
-                      : 'text-[#B8B3A8] hover:text-white hover:bg-white/[0.08]'
+                      ? 'bg-[#E8DCC6] text-[#722F37] shadow-[0_2px_12px_rgba(232,220,198,0.35)] font-bold'
+                      : 'text-[#B7A89A] hover:text-[#FAF7F2] hover:bg-white/[0.08]'
                   }`}
                 >
                   {link.label}
@@ -155,17 +155,17 @@ export const Navigation: React.FC<NavigationProps> = ({
           {/* Right Status & Primary CTA */}
           <div className="hidden sm:flex items-center gap-4">
             {/* Quiet status indicators */}
-            <div className="flex items-center gap-3 text-[11.5px] text-[#A5A096] font-medium">
-              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.06] border border-white/[0.08]">
+            <div className="flex items-center gap-3 text-[11.5px] text-[#B7A89A] font-medium">
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.05] border border-[#B7A89A]/20">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5DA87E] opacity-50" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-[#5DA87E]" />
                 </span>
-                <span className="text-white/90 font-medium">Online</span>
+                <span className="text-[#E8DCC6] font-medium">Online</span>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.06] border border-white/[0.08]">
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.05] border border-[#B7A89A]/20">
                 <span className={`w-2 h-2 rounded-full ${getBedrockDotColor()}`} />
-                <span className="text-white/90 font-medium">{getBedrockLabel()}</span>
+                <span className="text-[#E8DCC6] font-medium">{getBedrockLabel()}</span>
               </div>
             </div>
 
@@ -173,7 +173,7 @@ export const Navigation: React.FC<NavigationProps> = ({
             {isConsole ? (
               <button
                 onClick={onRunDemo}
-                className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#E5654F] to-[#F2815E] hover:from-[#F0715C] hover:to-[#FFA080] text-white text-[12px] font-bold shadow-[0_4px_16px_rgba(229,101,79,0.35)] transition-all duration-300 flex items-center gap-2 cursor-pointer active:scale-95"
+                className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#722F37] to-[#8D3A44] hover:from-[#8D3A44] hover:to-[#A3434E] text-white text-[12px] font-bold shadow-[0_4px_18px_rgba(114,47,55,0.45)] transition-all duration-300 flex items-center gap-2 cursor-pointer active:scale-95"
               >
                 <Play className="w-3.5 h-3.5 fill-current" />
                 <span>Run Demo</span>
@@ -181,7 +181,7 @@ export const Navigation: React.FC<NavigationProps> = ({
             ) : (
               <button
                 onClick={() => handleLinkClick('/console')}
-                className="px-5 py-2.5 rounded-full bg-white hover:bg-neutral-100 text-[#14130D] text-[12px] font-bold shadow-[0_4px_16px_rgba(255,255,255,0.2)] hover:shadow-[0_6px_22px_rgba(255,255,255,0.3)] transition-all duration-300 flex items-center gap-1.5 cursor-pointer active:scale-95 group"
+                className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#722F37] to-[#8D3A44] hover:from-[#8D3A44] hover:to-[#9E424E] text-white text-[12px] font-bold shadow-[0_4px_20px_rgba(114,47,55,0.4)] hover:shadow-[0_6px_26px_rgba(114,47,55,0.55)] transition-all duration-300 flex items-center gap-1.5 cursor-pointer active:scale-95 group"
               >
                 <span>Open Console</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -207,20 +207,20 @@ export const Navigation: React.FC<NavigationProps> = ({
       {mobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="lg:hidden border-t border-white/[0.08] bg-[#14130D] px-6 py-6 space-y-4 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200"
+          className="lg:hidden border-t border-[#B7A89A]/20 bg-[#161210] px-6 py-6 space-y-4 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200"
         >
           {/* Status strip */}
-          <div className="flex items-center justify-between pb-3 border-b border-white/[0.08] text-xs text-[#A5A096] font-medium">
+          <div className="flex items-center justify-between pb-3 border-b border-[#B7A89A]/15 text-xs text-[#B7A89A] font-medium">
             <div className="flex items-center gap-2">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5DA87E] opacity-50" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#5DA87E]" />
               </span>
-              <span className="text-white/90">System Online</span>
+              <span className="text-[#E8DCC6]">System Online</span>
             </div>
             <div className="flex items-center gap-1.5">
               <span className={`w-2 h-2 rounded-full ${getBedrockDotColor()}`} />
-              <span className="text-white/90">{getBedrockLabel()}</span>
+              <span className="text-[#E8DCC6]">{getBedrockLabel()}</span>
             </div>
           </div>
 
@@ -234,14 +234,14 @@ export const Navigation: React.FC<NavigationProps> = ({
                   onClick={() => handleLinkClick(link.path)}
                   className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-sm font-semibold transition-all cursor-pointer ${
                     isActive
-                      ? 'bg-white text-[#14130D] font-bold shadow-md'
-                      : 'text-[#B8B3A8] hover:text-white hover:bg-white/[0.08]'
+                      ? 'bg-[#E8DCC6] text-[#722F37] font-bold shadow-md'
+                      : 'text-[#B7A89A] hover:text-[#FAF7F2] hover:bg-white/[0.08]'
                   }`}
                 >
                   <span>{link.label}</span>
                   {isActive && (
                     <span className="flex items-center gap-1">
-                      <Zap className="w-3 h-3 fill-current text-[#14130D]" />
+                      <Zap className="w-3 h-3 fill-current text-[#722F37]" />
                     </span>
                   )}
                 </button>
@@ -257,7 +257,7 @@ export const Navigation: React.FC<NavigationProps> = ({
                   onRunDemo?.()
                   setMobileMenuOpen(false)
                 }}
-                className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#E5654F] to-[#F2815E] text-white text-sm font-bold flex items-center justify-center gap-2 cursor-pointer shadow-md active:scale-95 transition-transform"
+                className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#722F37] to-[#8D3A44] text-white text-sm font-bold flex items-center justify-center gap-2 cursor-pointer shadow-md active:scale-95 transition-transform"
               >
                 <Play className="w-4 h-4 fill-current" />
                 <span>Run Demo</span>
@@ -265,7 +265,7 @@ export const Navigation: React.FC<NavigationProps> = ({
             ) : (
               <button
                 onClick={() => handleLinkClick('/console')}
-                className="w-full py-3.5 rounded-full bg-white text-[#14130D] text-sm font-bold flex items-center justify-center gap-2 cursor-pointer shadow-md active:scale-95 transition-transform"
+                className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#722F37] to-[#8D3A44] text-white text-sm font-bold flex items-center justify-center gap-2 cursor-pointer shadow-md active:scale-95 transition-transform"
               >
                 <span>Open Console</span>
                 <ArrowRight className="w-4 h-4" />

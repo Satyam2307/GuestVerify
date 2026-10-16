@@ -157,8 +157,8 @@ export const AddScheduleModal: React.FC<AddScheduleModalProps> = ({
             onClick={() => setScheduleCategory('guest')}
             className={`flex-1 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
               scheduleCategory === 'guest'
-                ? 'bg-white text-[#1D1C1A] shadow-sm'
-                : 'text-[#706D68] hover:text-[#1D1C1A]'
+                ? 'bg-[#722F37] text-white shadow-sm'
+                : 'text-[#5C544D] hover:text-[#722F37]'
             }`}
           >
             <User className="w-3.5 h-3.5" />
@@ -169,8 +169,8 @@ export const AddScheduleModal: React.FC<AddScheduleModalProps> = ({
             onClick={() => setScheduleCategory('delivery')}
             className={`flex-1 py-1.5 rounded-lg text-xs font-semibold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
               scheduleCategory === 'delivery'
-                ? 'bg-white text-[#1D1C1A] shadow-sm'
-                : 'text-[#706D68] hover:text-[#1D1C1A]'
+                ? 'bg-[#722F37] text-white shadow-sm'
+                : 'text-[#5C544D] hover:text-[#722F37]'
             }`}
           >
             <Truck className="w-3.5 h-3.5" />
@@ -401,7 +401,7 @@ export const AddScheduleModal: React.FC<AddScheduleModalProps> = ({
               <button
                 type="submit"
                 disabled={submitting}
-                className="px-5 py-2 rounded-full bg-[#1D1C1A] hover:bg-[#E76F61] text-white font-semibold transition-all flex items-center gap-1.5 cursor-pointer disabled:opacity-50 active:scale-95 shadow-sm"
+                className="px-5 py-2 rounded-full bg-gradient-to-r from-[#722F37] to-[#8D3A44] hover:from-[#5C232A] hover:to-[#7E333C] text-white font-semibold transition-all flex items-center gap-1.5 cursor-pointer disabled:opacity-50 active:scale-95 shadow-[0_4px_16px_rgba(114,47,55,0.32)]"
               >
                 <Plus className="w-3.5 h-3.5" />
                 <span>{submitting ? 'Saving…' : 'Save schedule'}</span>

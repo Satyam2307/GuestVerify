@@ -390,15 +390,15 @@ export const ConsolePage: React.FC = () => {
                   }}
                   className={`flex-none w-[215px] p-3.5 rounded-2xl text-left cursor-pointer transition-all duration-250 border ${
                     isSelected
-                      ? 'bg-gradient-to-br from-[#FDE7E2] to-[#FBD5CE] border-[#E5654F] border-2 shadow-[0_6px_20px_rgba(229,101,79,0.14)] -translate-y-0.5'
-                      : 'bg-[#FFFDFB] border-[#DDD6CB] hover:border-[#CBC5BC] hover:shadow-[0_6px_20px_rgba(0,0,0,0.06)]'
+                      ? 'bg-gradient-to-br from-[#FAF7F2] to-[#E8DCC6]/70 border-[#722F37] border-2 shadow-[0_6px_20px_rgba(114,47,55,0.18)] -translate-y-0.5'
+                      : 'bg-[#FCFAF6] border-[#DCD2C3] hover:border-[#B7A89A] hover:shadow-[0_6px_20px_rgba(114,47,55,0.06)]'
                   }`}
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all ${isSelected ? 'bg-white text-[#E5654F] shadow-sm' : `bg-gradient-to-br ${accent.bg} ${accent.icon}`}`}>
+                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all ${isSelected ? 'bg-[#722F37] text-white shadow-sm' : `bg-gradient-to-br ${accent.bg} ${accent.icon}`}`}>
                       {getScenarioIcon(preset.id)}
                     </div>
-                    {isSelected && <CheckCircle2 className="w-4 h-4 text-[#E5654F]" />}
+                    {isSelected && <CheckCircle2 className="w-4 h-4 text-[#722F37]" />}
                   </div>
                   <div>
                     <h3 className="font-extrabold text-xs text-[#18170F] leading-tight truncate">{preset.title}</h3>
@@ -479,7 +479,7 @@ export const ConsolePage: React.FC = () => {
                     <button
                       onClick={handleTriggerEvent}
                       disabled={loading}
-                      className="h-[44px] px-6 rounded-full bg-gradient-to-r from-[#18170F] to-[#2A2825] hover:from-[#E5654F] hover:to-[#F2815E] text-white text-xs font-bold shadow-[0_4px_16px_rgba(0,0,0,0.12)] hover:shadow-[0_6px_24px_rgba(229,101,79,0.25)] transition-all duration-300 flex items-center gap-2.5 cursor-pointer active:scale-95 disabled:opacity-50"
+                      className="h-[44px] px-6 rounded-full bg-gradient-to-r from-[#722F37] to-[#8D3A44] hover:from-[#5C232A] hover:to-[#7E333C] text-white text-xs font-bold shadow-[0_4px_16px_rgba(114,47,55,0.32)] hover:shadow-[0_6px_24px_rgba(114,47,55,0.45)] transition-all duration-300 flex items-center gap-2.5 cursor-pointer active:scale-95 disabled:opacity-50"
                     >
                       {currentGuest ? <Key className="w-4 h-4" /> : <Play className="w-4 h-4 fill-current" />}
                       <span>{currentGuest ? 'Check scheduled guest' : 'Run visitor event'}</span>
@@ -561,7 +561,7 @@ export const ConsolePage: React.FC = () => {
                     <button
                       onClick={handleTriggerEvent}
                       disabled={loading}
-                      className="h-[40px] px-5 rounded-full bg-gradient-to-r from-[#18170F] to-[#2A2825] hover:from-[#E5654F] hover:to-[#F2815E] text-white text-xs font-bold shadow-[0_4px_12px_rgba(0,0,0,0.12)] hover:shadow-[0_6px_20px_rgba(229,101,79,0.2)] transition-all duration-300 flex items-center gap-1.5 cursor-pointer active:scale-95 disabled:opacity-50"
+                      className="h-[40px] px-5 rounded-full bg-gradient-to-r from-[#722F37] to-[#8D3A44] hover:from-[#5C232A] hover:to-[#7E333C] text-white text-xs font-bold shadow-[0_4px_12px_rgba(114,47,55,0.28)] hover:shadow-[0_6px_20px_rgba(114,47,55,0.4)] transition-all duration-300 flex items-center gap-1.5 cursor-pointer active:scale-95 disabled:opacity-50"
                     >
                       <RefreshCw className="w-3.5 h-3.5" />
                       <span>Simulate again</span>

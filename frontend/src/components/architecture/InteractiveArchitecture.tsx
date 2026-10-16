@@ -59,16 +59,16 @@ export const ARCHITECTURE_NODES: ArchitectureNode[] = [
     securityBoundary: 'Ingests raw untrusted hardware signal into security perimeter.',
     category: 'event',
     color: {
-      primary: 'Sky Blue',
-      accentHex: '#0284C7',
-      badgeBg: 'bg-sky-50 text-sky-700 border-sky-200',
-      badgeText: 'text-sky-700',
-      borderAccent: 'border-t-[#0284C7]',
-      iconBg: 'bg-sky-100 text-sky-700',
-      iconText: 'text-sky-700',
-      activeGradient: 'from-[#0284C7] to-[#0369A1]',
-      activeRing: 'ring-sky-400',
-      activeShadow: 'shadow-[0_16px_36px_rgba(2,132,199,0.35)]'
+      primary: 'Cosmic Latte Ingest',
+      accentHex: '#B7A89A',
+      badgeBg: 'bg-[#FAF6EF] text-[#615348] border-[#C9BCB0]',
+      badgeText: 'text-[#615348]',
+      borderAccent: 'border-t-[#B7A89A]',
+      iconBg: 'bg-[#E8DCC6]/60 text-[#615348]',
+      iconText: 'text-[#615348]',
+      activeGradient: 'from-[#B7A89A] to-[#8C7D6F]',
+      activeRing: 'ring-[#B7A89A]',
+      activeShadow: 'shadow-[0_16px_36px_rgba(183,168,154,0.45)]'
     }
   },
   {
@@ -163,16 +163,16 @@ export const ARCHITECTURE_NODES: ArchitectureNode[] = [
     securityBoundary: 'Deterministic authorization. Only verified conditions trigger access.',
     category: 'policy',
     color: {
-      primary: 'Coral Policy',
-      accentHex: '#E11D48',
-      badgeBg: 'bg-rose-50 text-rose-700 border-rose-200',
-      badgeText: 'text-rose-700',
-      borderAccent: 'border-t-[#E11D48]',
-      iconBg: 'bg-rose-100 text-rose-700',
-      iconText: 'text-rose-700',
-      activeGradient: 'from-[#E11D48] to-[#BE123C]',
-      activeRing: 'ring-rose-400',
-      activeShadow: 'shadow-[0_16px_36px_rgba(225,29,72,0.35)]'
+      primary: 'Deep Burgundy Zero-Trust',
+      accentHex: '#722F37',
+      badgeBg: 'bg-[#F7EFF0] text-[#722F37] border-[#DAB3B9]',
+      badgeText: 'text-[#722F37]',
+      borderAccent: 'border-t-[#722F37]',
+      iconBg: 'bg-[#F7EFF0] text-[#722F37]',
+      iconText: 'text-[#722F37]',
+      activeGradient: 'from-[#722F37] to-[#4A1C22]',
+      activeRing: 'ring-[#8D3A44]',
+      activeShadow: 'shadow-[0_16px_36px_rgba(114,47,55,0.45)]'
     }
   },
   {
@@ -302,19 +302,19 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
   }
 
   return (
-    <div className="space-y-10 text-left text-[#18170F]">
+    <div className="space-y-10 text-left text-[#1C1917]">
       {/* ─── SECTION HEADER ─── */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-black/[0.08] pb-8">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#B7A89A]/30 pb-8">
         <div className="space-y-3 max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/[0.05] border border-black/[0.06] text-xs font-bold text-[#65625B] uppercase tracking-wider font-editorial">
-            <Layers className="w-3.5 h-3.5 text-[#18170F]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8DCC6]/60 border border-[#B7A89A]/40 text-xs font-bold text-[#722F37] uppercase tracking-wider font-editorial">
+            <Layers className="w-3.5 h-3.5 text-[#722F37]" />
             <span>Interactive Security Architecture</span>
           </div>
-          <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-[#18170F]">
+          <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-[#1C1917]">
             How the decision is made
           </h2>
-          <p className="font-editorial text-base sm:text-lg text-[#65625B] leading-relaxed">
-            GuestVerify strictly separates <strong className="text-[#18170F]">AI-assisted visitor intent</strong> from <strong className="text-[#18170F]">deterministic zero-trust policy enforcement</strong>.
+          <p className="font-editorial text-base sm:text-lg text-[#5C544D] leading-relaxed">
+            GuestVerify strictly separates <strong className="text-[#722F37]">AI-assisted visitor intent</strong> from <strong className="text-[#722F37]">deterministic zero-trust policy enforcement</strong>.
           </p>
         </div>
 
@@ -325,8 +325,8 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
             disabled={isTracing}
             className={`px-7 py-3 rounded-full text-xs font-bold transition-all duration-300 flex items-center gap-2.5 cursor-pointer shadow-md active:scale-95 disabled:opacity-75 ${
               isTracing
-                ? 'bg-gradient-to-r from-[#EA580C] to-[#E11D48] text-white shadow-[0_8px_24px_rgba(234,88,12,0.35)] animate-pulse'
-                : 'bg-gradient-to-r from-[#18170F] to-[#2D2B26] hover:from-[#18170F] hover:to-[#3E3C36] text-white hover:shadow-lg'
+                ? 'bg-gradient-to-r from-[#722F37] via-[#8D3A44] to-[#B7A89A] text-white shadow-[0_8px_24px_rgba(114,47,55,0.4)] animate-pulse'
+                : 'bg-gradient-to-r from-[#722F37] to-[#8D3A44] hover:from-[#5C232A] hover:to-[#7E333C] text-white shadow-[0_4px_16px_rgba(114,47,55,0.32)] hover:shadow-[0_8px_24px_rgba(114,47,55,0.45)]'
             }`}
           >
             {isTracing ? (
@@ -338,7 +338,7 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
               <>
                 <Play className="w-3.5 h-3.5 fill-current" />
                 <span>Run Decision Trace</span>
-                <Sparkles className="w-3.5 h-3.5 text-[#E4A02F]" />
+                <Sparkles className="w-3.5 h-3.5 text-[#E8DCC6]" />
               </>
             )}
           </button>
@@ -346,9 +346,9 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
           <button
             onClick={loadLatestEventTrace}
             disabled={isTracing}
-            className="px-5 py-3 rounded-full bg-white hover:bg-neutral-50 border border-black/[0.08] text-[#18170F] text-xs font-bold transition-all flex items-center gap-2 cursor-pointer shadow-sm active:scale-95"
+            className="px-5 py-3 rounded-full bg-[#FAF7F2] hover:bg-[#E8DCC6]/50 border border-[#B7A89A]/40 text-[#1C1917] text-xs font-bold transition-all flex items-center gap-2 cursor-pointer shadow-sm active:scale-95"
           >
-            <RotateCcw className="w-3.5 h-3.5 text-[#918C84]" />
+            <RotateCcw className="w-3.5 h-3.5 text-[#8C8074]" />
             <span>Latest Event</span>
           </button>
         </div>
@@ -356,9 +356,9 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
 
       {/* Progress Bar for Active Trace */}
       {isTracing && (
-        <div className="w-full bg-black/[0.05] h-1.5 rounded-full overflow-hidden">
+        <div className="w-full bg-[#E8DCC6]/40 h-1.5 rounded-full overflow-hidden border border-[#B7A89A]/30">
           <div
-            className="bg-gradient-to-r from-[#0284C7] via-[#EA580C] to-[#16A34A] h-full transition-all duration-500 ease-out"
+            className="bg-gradient-to-r from-[#B7A89A] via-[#722F37] to-[#16A34A] h-full transition-all duration-500 ease-out"
             style={{ width: `${(((activeStepIndex ?? 0) + 1) / 6) * 100}%` }}
           />
         </div>
@@ -382,10 +382,10 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
             cardClasses += 'bg-[#F9FCFA] border-[#A8DFB8] shadow-sm hover:shadow-md'
           } else if (isSelected) {
             // Selected for Inspection
-            cardClasses += `bg-white border-2 border-[#18170F] ${node.color.borderAccent} shadow-[0_12px_32px_rgba(0,0,0,0.08)] -translate-y-1`
+            cardClasses += `bg-[#FCFAF6] border-2 border-[#722F37] ${node.color.borderAccent} shadow-[0_12px_32px_rgba(114,47,55,0.12)] -translate-y-1`
           } else {
-            // Idle State: Clean white card with subtle top color border and soft hover
-            cardClasses += `bg-white border-black/[0.07] ${node.color.borderAccent} hover:border-black/[0.15] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] hover:-translate-y-0.5`
+            // Idle State: Clean warm card with subtle top color border and soft hover
+            cardClasses += `bg-[#FCFAF6] border-[#DCD2C3] ${node.color.borderAccent} hover:border-[#B7A89A] hover:shadow-[0_8px_24px_rgba(114,47,55,0.06)] hover:-translate-y-0.5`
           }
 
           return (
@@ -397,7 +397,7 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
               <div>
                 {/* Top Badge & Status Indicator */}
                 <div className="flex items-center justify-between mb-3">
-                  <span className={`text-xs font-mono font-bold tracking-tight ${isActiveStep ? 'text-white/80' : 'text-[#918C84]'}`}>
+                  <span className={`text-xs font-mono font-bold tracking-tight ${isActiveStep ? 'text-white/80' : 'text-[#8C8074]'}`}>
                     STAGE {node.number}
                   </span>
 
@@ -411,7 +411,7 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
                       ✓
                     </span>
                   ) : (
-                    <span className={`w-2 h-2 rounded-full ${isSelected ? 'bg-[#18170F]' : 'bg-black/10'}`} />
+                    <span className={`w-2 h-2 rounded-full ${isSelected ? 'bg-[#722F37]' : 'bg-[#B7A89A]/30'}`} />
                   )}
                 </div>
 
@@ -427,20 +427,20 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
                 </div>
 
                 {/* Title & Short Label */}
-                <h3 className={`font-display font-bold text-[14px] leading-tight ${isActiveStep ? 'text-white' : 'text-[#18170F]'}`}>
+                <h3 className={`font-display font-bold text-[14px] leading-tight ${isActiveStep ? 'text-white' : 'text-[#1C1917]'}`}>
                   {node.title}
                 </h3>
-                <p className={`text-[12px] mt-1 leading-snug line-clamp-2 ${isActiveStep ? 'text-white/90' : 'text-[#65625B]'}`}>
+                <p className={`text-[12px] mt-1 leading-snug line-clamp-2 ${isActiveStep ? 'text-white/90' : 'text-[#5C544D]'}`}>
                   {node.shortLabel}
                 </p>
               </div>
 
               {/* Bottom Inspection Indicator */}
               <div className={`text-[11px] font-semibold flex items-center justify-between pt-2.5 border-t ${
-                isActiveStep ? 'border-white/20 text-white/90' : 'border-black/[0.05] text-[#918C84]'
+                isActiveStep ? 'border-white/20 text-white/90' : 'border-[#B7A89A]/20 text-[#8C8074]'
               }`}>
                 <span>{isActiveStep ? 'Analyzing...' : isSelected ? 'Inspecting' : 'Click to inspect'}</span>
-                {isSelected && !isActiveStep && <span className="w-1.5 h-1.5 rounded-full bg-[#18170F]" />}
+                {isSelected && !isActiveStep && <span className="w-1.5 h-1.5 rounded-full bg-[#722F37]" />}
                 {isActiveStep && <ArrowRight className="w-3 h-3 text-white animate-bounce" />}
               </div>
             </button>
@@ -450,24 +450,24 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
 
       {/* Trace result banner */}
       {traceResult && (
-        <div className="p-6 rounded-[24px] bg-gradient-to-r from-[#EAF7EF] to-[#DDF2E4] border border-[#A8DFB8] text-[#186941] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm animate-in fade-in slide-in-from-bottom-2 duration-300">
+        <div className="p-6 rounded-[24px] bg-gradient-to-r from-[#FAF7F2] to-[#E8DCC6]/50 border border-[#B7A89A]/40 text-[#722F37] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm animate-in fade-in slide-in-from-bottom-2 duration-300">
           <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-2xl bg-[#5DA87E] text-white flex items-center justify-center shadow-md shrink-0">
+            <div className="w-10 h-10 rounded-2xl bg-[#722F37] text-[#FAF7F2] flex items-center justify-center shadow-md shrink-0">
               <CheckCircle2 className="w-6 h-6" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-display font-bold text-base text-[#186941]">Trace Pipeline Complete:</span>
-                <span className="px-2.5 py-0.5 rounded-full bg-[#5DA87E]/20 text-[#186941] text-xs font-bold font-mono">
+                <span className="font-display font-bold text-base text-[#722F37]">Trace Pipeline Complete:</span>
+                <span className="px-2.5 py-0.5 rounded-full bg-[#722F37]/15 text-[#722F37] text-xs font-bold font-mono">
                   {traceResult.decision}
                 </span>
               </div>
-              <p className="text-xs text-[#2A724B] mt-1 leading-relaxed">{traceResult.reason}</p>
+              <p className="text-xs text-[#5C544D] mt-1 leading-relaxed">{traceResult.reason}</p>
             </div>
           </div>
           <button
             onClick={() => setTraceResult(null)}
-            className="text-xs font-bold px-4 py-2 rounded-full bg-white/80 hover:bg-white text-[#186941] border border-[#A8DFB8] shadow-sm transition-all cursor-pointer"
+            className="text-xs font-bold px-4 py-2 rounded-full bg-white hover:bg-neutral-50 text-[#722F37] border border-[#B7A89A]/40 shadow-sm transition-all cursor-pointer"
           >
             Dismiss
           </button>
@@ -475,15 +475,15 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
       )}
 
       {/* ─── NODE DETAIL INSPECTION PANEL ─── */}
-      <div className={`p-8 sm:p-10 rounded-[28px] bg-white border border-black/[0.08] shadow-[0_12px_40px_rgba(0,0,0,0.04)] space-y-7 transition-all duration-300 ${selectedNode.color.borderAccent} border-t-4`}>
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-black/[0.06] pb-6">
+      <div className={`p-8 sm:p-10 rounded-[28px] bg-[#FCFAF6] border border-[#DCD2C3] shadow-[0_12px_40px_rgba(114,47,55,0.05)] space-y-7 transition-all duration-300 ${selectedNode.color.borderAccent} border-t-4`}>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#B7A89A]/20 pb-6">
           <div className="flex items-center gap-3.5">
             <div className={`w-12 h-12 rounded-2xl ${selectedNode.color.iconBg} flex items-center justify-center shadow-sm`}>
               {getNodeIcon(selectedNode.id)}
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-xs font-mono font-bold text-[#918C84]">
+                <span className="text-xs font-mono font-bold text-[#8C8074]">
                   STAGE {selectedNode.number}
                 </span>
                 <span className="text-black/20">•</span>
@@ -491,7 +491,7 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
                   {selectedNode.color.primary}
                 </span>
               </div>
-              <h3 className="font-display text-2xl font-extrabold tracking-tight text-[#18170F] mt-0.5">
+              <h3 className="font-display text-2xl font-extrabold tracking-tight text-[#1C1917] mt-0.5">
                 {selectedNode.title}
               </h3>
             </div>
@@ -501,7 +501,7 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
             {selectedNode.technology.map((tech) => (
               <span
                 key={tech}
-                className="text-[11px] font-semibold px-3 py-1 rounded-full bg-neutral-100 text-[#58554F] border border-black/[0.05]"
+                className="text-[11px] font-semibold px-3 py-1 rounded-full bg-[#FAF7F2] text-[#5C544D] border border-[#B7A89A]/30"
               >
                 {tech}
               </span>
@@ -509,38 +509,38 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
           </div>
         </div>
 
-        <p className="font-editorial text-base text-[#58554F] leading-relaxed">
+        <p className="font-editorial text-base text-[#5C544D] leading-relaxed">
           {selectedNode.description}
         </p>
 
         {/* 4 Dimension Matrix */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs pt-2">
-          <div className="p-5 rounded-2xl bg-neutral-50 border border-black/[0.04] space-y-1.5">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#918C84] block font-editorial">
+          <div className="p-5 rounded-2xl bg-[#FAF7F2] border border-[#B7A89A]/30 space-y-1.5">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#8C8074] block font-editorial">
               Purpose
             </span>
-            <span className="text-[#18170F] font-medium leading-snug block">{selectedNode.purpose}</span>
+            <span className="text-[#1C1917] font-medium leading-snug block">{selectedNode.purpose}</span>
           </div>
 
-          <div className="p-5 rounded-2xl bg-neutral-50 border border-black/[0.04] space-y-1.5">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#918C84] block font-editorial">
+          <div className="p-5 rounded-2xl bg-[#FAF7F2] border border-[#B7A89A]/30 space-y-1.5">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#8C8074] block font-editorial">
               Input
             </span>
-            <span className="text-[#18170F] font-medium leading-snug block">{selectedNode.input}</span>
+            <span className="text-[#1C1917] font-medium leading-snug block">{selectedNode.input}</span>
           </div>
 
-          <div className="p-5 rounded-2xl bg-neutral-50 border border-black/[0.04] space-y-1.5">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#918C84] block font-editorial">
+          <div className="p-5 rounded-2xl bg-[#FAF7F2] border border-[#B7A89A]/30 space-y-1.5">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#8C8074] block font-editorial">
               Output
             </span>
-            <span className="text-[#18170F] font-medium leading-snug block">{selectedNode.output}</span>
+            <span className="text-[#1C1917] font-medium leading-snug block">{selectedNode.output}</span>
           </div>
 
-          <div className="p-5 rounded-2xl bg-neutral-50 border border-black/[0.04] space-y-1.5">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[#918C84] block font-editorial">
+          <div className="p-5 rounded-2xl bg-[#FAF7F2] border border-[#B7A89A]/30 space-y-1.5">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#8C8074] block font-editorial">
               Security Boundary
             </span>
-            <span className="text-[#18170F] font-semibold leading-snug block">
+            <span className="text-[#1C1917] font-semibold leading-snug block">
               {selectedNode.securityBoundary}
             </span>
           </div>
@@ -549,28 +549,28 @@ export const InteractiveArchitecture: React.FC<InteractiveArchitectureProps> = (
 
       {/* ─── DUAL SECURITY BOUNDARY CARDS (Core Differentiator) ─── */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="p-8 rounded-[28px] bg-white border border-black/[0.08] shadow-sm space-y-3 relative overflow-hidden border-t-4 border-t-[#EA580C]">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#EA580C]">
+        <div className="p-8 rounded-[28px] bg-[#FCFAF6] border border-[#DCD2C3] shadow-sm space-y-3 relative overflow-hidden border-t-4 border-t-[#B7A89A]">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#615348]">
             <Cpu className="w-4 h-4" />
             <span>Responsibility 01</span>
           </div>
-          <h4 className="font-display text-xl font-bold tracking-tight text-[#18170F]">
+          <h4 className="font-display text-xl font-bold tracking-tight text-[#1C1917]">
             AI-Assisted Interpretation
           </h4>
-          <p className="font-editorial text-sm text-[#65625B] leading-relaxed">
+          <p className="font-editorial text-sm text-[#5C544D] leading-relaxed">
             Amazon Bedrock parses noisy natural visitor speech, identifies claimed carriers and recipients, and detects urgency or coercion indicators. It never makes the final security verdict or directly unlocks any hardware.
           </p>
         </div>
 
-        <div className="p-8 rounded-[28px] bg-white border border-black/[0.08] shadow-sm space-y-3 relative overflow-hidden border-t-4 border-t-[#E11D48]">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#E11D48]">
+        <div className="p-8 rounded-[28px] bg-[#FCFAF6] border border-[#DCD2C3] shadow-sm space-y-3 relative overflow-hidden border-t-4 border-t-[#722F37]">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#722F37]">
             <Shield className="w-4 h-4" />
             <span>Responsibility 02</span>
           </div>
-          <h4 className="font-display text-xl font-bold tracking-tight text-[#18170F]">
+          <h4 className="font-display text-xl font-bold tracking-tight text-[#1C1917]">
             Deterministic Authorization
           </h4>
-          <p className="font-editorial text-sm text-[#65625B] leading-relaxed">
+          <p className="font-editorial text-sm text-[#5C544D] leading-relaxed">
             A zero-trust policy engine strictly verifies claims against registered delivery manifests and homeowner guest lists. Unrecognized visitors require homeowner PIN approval or trigger a security denial.
           </p>
         </div>

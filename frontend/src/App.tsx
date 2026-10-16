@@ -116,10 +116,10 @@ export const App: React.FC = () => {
 
   return (
     <div
-      className={`min-h-screen flex flex-col font-sans selection:bg-black/10 selection:text-black ${
+      className={`min-h-screen flex flex-col font-sans selection:bg-[#722F37]/15 selection:text-[#722F37] ${
         currentPath === '/console'
-          ? 'bg-[#F5F1EB] text-[#18170F] overflow-hidden h-screen'
-          : 'bg-[#F5F1EB] text-[#18170F]'
+          ? 'bg-[var(--bg-page)] text-[#1C1917] overflow-hidden h-screen'
+          : 'bg-[var(--bg-page)] text-[#1C1917]'
       }`}
     >
       {/* Navigation Navbar */}

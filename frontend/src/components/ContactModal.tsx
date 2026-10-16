@@ -110,11 +110,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/40 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="relative w-full max-w-lg rounded-[28px] bg-white border border-black/[0.08] shadow-[0_24px_48px_rgba(0,0,0,0.16)] p-6 sm:p-8 text-[#18170F] overflow-hidden">
+      <div className="relative w-full max-w-lg rounded-[28px] bg-[#FCFAF6] border border-[#DCD2C3] shadow-[0_24px_48px_rgba(114,47,55,0.14)] p-6 sm:p-8 text-[#1C1917] overflow-hidden">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 w-8 h-8 rounded-full bg-black/[0.04] hover:bg-black/[0.08] flex items-center justify-center text-[#65625B] hover:text-[#18170F] transition-colors cursor-pointer"
+          className="absolute top-5 right-5 w-8 h-8 rounded-full bg-black/[0.04] hover:bg-black/[0.08] flex items-center justify-center text-[#5C544D] hover:text-[#1C1917] transition-colors cursor-pointer"
         >
           <X className="w-4 h-4" />
         </button>
@@ -122,25 +122,25 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
         {submitted ? (
           /* Success Screen */
           <div className="py-8 text-center space-y-5">
-            <div className="w-16 h-16 rounded-2xl bg-[#5DA87E]/10 text-[#5DA87E] mx-auto flex items-center justify-center">
+            <div className="w-16 h-16 rounded-2xl bg-[#722F37]/10 text-[#722F37] mx-auto flex items-center justify-center">
               <CheckCircle2 className="w-8 h-8" />
             </div>
 
             <div className="space-y-2">
-              <h2 className="text-2xl font-extrabold text-[#18170F]">Inquiry Dispatched</h2>
-              <p className="text-sm text-[#65625B] max-w-sm mx-auto leading-relaxed">
+              <h2 className="text-2xl font-extrabold text-[#1C1917]">Inquiry Dispatched</h2>
+              <p className="text-sm text-[#5C544D] max-w-sm mx-auto leading-relaxed">
                 Thank you for reaching out. Our security team will review your requirements and respond within 24 hours.
               </p>
             </div>
 
-            <div className="p-4 rounded-xl bg-[#F5F1EB] border border-black/[0.05] text-xs font-mono text-[#65625B] inline-block">
-              Reference Ticket: <strong className="text-[#18170F]">{ticketId}</strong>
+            <div className="p-4 rounded-xl bg-[#FAF7F2] border border-[#B7A89A]/30 text-xs font-mono text-[#5C544D] inline-block">
+              Reference Ticket: <strong className="text-[#722F37]">{ticketId}</strong>
             </div>
 
             <div className="pt-3">
               <button
                 onClick={handleReset}
-                className="px-6 py-2.5 rounded-full bg-[#18170F] hover:bg-[#2D2B26] text-white font-bold text-xs shadow-sm transition-all cursor-pointer"
+                className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[#722F37] to-[#8D3A44] hover:from-[#5C232A] hover:to-[#7E333C] text-white font-bold text-xs shadow-sm transition-all cursor-pointer"
               >
                 Close & Return
               </button>
@@ -150,14 +150,14 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
           /* Form Content */
           <div className="space-y-6">
             <div className="space-y-1">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#5DA87E]/10 text-[#5DA87E] text-[11px] font-bold">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8DCC6]/60 border border-[#B7A89A]/40 text-[#722F37] text-[11px] font-bold">
                 <Shield className="w-3 h-3" />
                 <span>Security Team Contact</span>
               </div>
-              <h2 className="text-2xl font-extrabold text-[#18170F] tracking-tight">
+              <h2 className="text-2xl font-extrabold text-[#1C1917] tracking-tight">
                 Get in Touch with GuestVerify
               </h2>
-              <p className="text-xs text-[#65625B]">
+              <p className="text-xs text-[#5C544D]">
                 Have questions about zero-trust door verification, Ring integration, or custom deployments?
               </p>
             </div>
@@ -282,7 +282,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                 <button
                   type="submit"
                   disabled={loading}
-                  className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[#18170F] to-[#2D2B26] hover:from-[#18170F] hover:to-[#3E3C36] text-white font-bold shadow-md flex items-center gap-2 cursor-pointer disabled:opacity-50"
+                  className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[#722F37] to-[#8D3A44] hover:from-[#5C232A] hover:to-[#7E333C] text-white font-bold shadow-md shadow-[0_4px_16px_rgba(114,47,55,0.3)] flex items-center gap-2 cursor-pointer disabled:opacity-50"
                 >
                   {loading ? (
                     <span>Submitting...</span>
