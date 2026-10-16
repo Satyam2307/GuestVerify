@@ -11,6 +11,7 @@ import {
   User,
   ExternalLink
 } from 'lucide-react'
+import { submitContact } from '../lib/api'
 
 interface ContactModalProps {
   isOpen: boolean
@@ -65,26 +66,13 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
     setLoading(true)
 
     try {
-      const response = await fetch('/api/v1/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          full_name: trimmedName,
-          email: trimmedEmail,
-          organization: organization.trim() || 'Individual',
-          inquiry_type: inquiryType,
-          message: trimmedMsg
-        })
+      const resData = await submitContact({
+        full_name: trimmedName,
+        email: trimmedEmail,
+        organization: organization.trim() || 'Individual',
+        inquiry_type: inquiryType,
+        message: trimmedMsg
       })
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}))
-        throw new Error(errorData.detail || 'Failed to submit inquiry. Please try again.')
-      }
-
-      const resData = await response.json()
       setTicketId(resData.ticket_id || `GV-${Math.floor(100000 + Math.random() * 900000)}`)
       setSubmitted(true)
     } catch (err: any) {
